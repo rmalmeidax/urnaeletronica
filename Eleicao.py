@@ -40,12 +40,16 @@ class Eleicao:
 
     def voto_presidente(self, voto):
         voto = str(voto)
+        lista = ["13", "12", "11", "22"]
         if len(voto) == 2 and voto.isdigit():
-            self.presidente[voto] = self.presidente.get(voto, 0) + 1
-            print(f"Total de votos do candidato {voto}: {self.presidente[voto]}")
-            return True
+            if voto in lista:
+                self.presidente[voto] = self.presidente.get(voto, 0) + 1
+                print(f"Total de votos do candidato {voto}: {self.presidente[voto]}")
+                return True
+            else:
+                print (f"Candidato não encontrado {voto} ")
         else:
-            print("Número inválido")
+            print(f"Número inválido {voto}")
             return False
 
     def voto_governador(self, voto):
