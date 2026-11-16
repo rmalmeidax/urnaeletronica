@@ -5,8 +5,28 @@ class Eleicao:
         self.presidente = {}
         self.governador = {}
         self.senador = {}
+        self.dep_federal = {}
+        self.dep_estadual = {}
 
+    def voto_dep_estadual(self, voto):
+         voto = str(voto)
+         if len (voto)== 5 and voto.isdigit():
+            self.dep_estadual[voto] = self.dep_estadual(voto,0)+1
+            print (f"Total de votos {voto} : {self.dep_estadual[voto]}")
+            return True
+         else:
+            print("Número, inválido")
+            return False
 
+    def voto_dep_federal(self,voto):
+        voto =str(voto)
+        if len(voto) == 4 and voto.isdigit():
+            self.dep_federal[voto] = self.dep_federal(voto,0)+1
+            print(f"Total de votos {votos}: {self.dep_federal[voto]}")
+            return True
+        else:
+            print("Número invalido")
+            return False
 
     def voto_senador (self, voto):
         voto = str(voto)
