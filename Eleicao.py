@@ -12,7 +12,7 @@ class Eleicao:
          voto = str(voto)
          if len (voto)== 5 and voto.isdigit():
             self.dep_estadual[voto] = self.dep_estadual(voto,0)+1
-            print (f"Total de votos {voto} : {self.dep_estadual[voto]}")
+            print (f"Total de votos para Deputado Estadual {voto} : {self.dep_estadual[voto]}")
             return True
          else:
             print("Número, inválido")
@@ -22,7 +22,7 @@ class Eleicao:
         voto =str(voto)
         if len(voto) == 4 and voto.isdigit():
             self.dep_federal[voto] = self.dep_federal(voto,0)+1
-            print(f"Total de votos {votos}: {self.dep_federal[voto]}")
+            print(f"Total de votos para Deputado Federal {votos}: {self.dep_federal[voto]}")
             return True
         else:
             print("Número invalido")
@@ -32,7 +32,7 @@ class Eleicao:
         voto = str(voto)
         if len (voto) == 2 and voto.isdigit():
             self.senador [voto] = self.senador.get (voto, 0) +1
-            print(f"Total de votos {votos} : {self.senador[voto]}")
+            print(f"Total de votos para Senador {votos} : {self.senador[voto]}")
             return True
         else:
             print("Número inválido")
@@ -44,7 +44,7 @@ class Eleicao:
         if len(voto) == 2 and voto.isdigit():
             if voto in lista:
                 self.presidente[voto] = self.presidente.get(voto, 0) + 1
-                print(f"Total de votos do candidato {voto}: {self.presidente[voto]}")
+                print(f"Total de votos  para Presidente {voto}: {self.presidente[voto]}")
                 return True
             else:
                 print (f"Candidato não encontrado {voto} ")
@@ -56,7 +56,7 @@ class Eleicao:
         voto = str(voto)
         if len(voto) == 2 and voto.isdigit():
             self.governador [voto] = self.governador.get(voto,0) +1
-            print(f"Total de votos candidato {voto}: {self.governador[voto]}")
+            print(f"Total de votos para Governador {voto}: {self.governador[voto]}")
             return True
         else:
             print("Número inválido")
@@ -68,7 +68,7 @@ class Eleicao:
 urna = Eleicao()
 
 urna.voto_presidente(13)
-urna.voto_presidente(22)
+urna.voto_presidente(33)
 urna.voto_presidente(13)
 urna.voto_governador(13)
 urna.voto_governador(22)
